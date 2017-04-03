@@ -4,6 +4,9 @@ var app = express();
 var helloWorld = function(req, res, next) {
     res.send('Hello World');
 }
+var helloYok = function(req, res, next) {
+    res.send('Hello Yok.');
+}
 
 app.use('/', helloWorld);
 
