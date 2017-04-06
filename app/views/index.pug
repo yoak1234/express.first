@@ -1,0 +1,13 @@
+include ./template.pug
+
+block content
+    .container
+        .jumbotron
+            .container
+                h1(style="background-color: coral; color: white; padding-left: 10px;") Shiba
+                a(href="https://www.google.co.th/" target="_blank") 
+                    button.btn.btn-primary Google
+                p 555
+                button.btn.btn-primary(onclick="$('#shiba').toggle()") Toggle Picture
+                div
+                    img#shiba(src="public/img/shiba.jpg", alt="shiba", title="Shiba")
