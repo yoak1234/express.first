@@ -1,0 +1,16 @@
+#shiba-img {
+    width: 100%;
+    height: 100%;
+}
+
+#shiba-img-thumbnail {
+    width: 70%;
+    margin: auto;
+    display: block;
+}
+
+#btn-toggle-shiba-img {
+    width: 70%;
+    margin: auto;
+    display: block;
+}

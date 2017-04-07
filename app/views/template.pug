@@ -1,17 +1,22 @@
 doctype html
 html(lang="en")
     head
-        title defaultTitle
+        title= title
         
         meta(name="viewport", content="width=device-width, initial-scale=1, shrink-to-fit=no")
         meta(charset="utf-8")
         
-        link(href="bootstrap/bootstrap.min.css", rel="stylesheet")
+        link(rel="stylesheet", href="bootstrap/css/bootstrap.min.css")
+
+        block head
     body
-        p used template.
+        include ./navbar
+        
         block content
             
+        script(src="jquery/jquery.min.js")
+        script(src="bootstrap/js/bootstrap.min.js")
+
         block script
-            script(src="jquery/jquery.min.js")
-            //- script(src="/bootstrap-4.0.0-alpha.6-dist/js/bootstrap.min.js")
+            
         

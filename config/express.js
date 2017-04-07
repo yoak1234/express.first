@@ -8,14 +8,13 @@ module.exports = function() {
     var app = express();
 
     require('../app/routes/index.routes')(app);
-    
+
     app.set('views', './app/views');
     app.set('view engine', 'pug');
 
     if (process.env.NODE_ENV == 'dev') {
         app.use(morgan('dev'));
-    } 
-    else {
+    } else {
         app.use(compression());
     }
     app.use(bodyParser.urlencoded({
@@ -24,8 +23,7 @@ module.exports = function() {
     app.use(bodyParser.json());
 
     app.use('/jquery', express.static('node_modules/jquery/dist/'))
-    // app.use('/jquery', express.static(path.join(__dirname, 'node_modules/jquery/dist')))
-    app.use('/bootstrap', express.static('node_modules/bootstrap/dist/css/'))
+    app.use('/bootstrap', express.static('node_modules/bootstrap/dist/'))
     app.use('/public', express.static('public'))
 
     return app;
